@@ -1,0 +1,230 @@
+/* Reset
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+* {
+	box-sizing: border-box;			/* Réinitialise le modèle de boite pour tout le document */
+}
+
+body {
+	margin: 0;						/* Supprime les marges par défaut du navigateur sur le body */
+	padding: 0;						/* Supprime les marges par défaut du navigateur sur le body */
+}
+
+/* Background
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.page__background {      /* Donne un style à .page__background */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;					/* Permet de faire passer l'élément en arrière plan */
+	width: 100vw;
+	height: 100vh;
+}
+
+.page__background img { /* Permet de cibler plus précisément l'image qui se trouve dans .page__background */
+	width: 100%;					/* La largeur de l'image remplit 100% de son parent */
+	height: 100%;					/* La hauteur de l'image remplit 100% de son parent */
+	image-rendering: -webkit-optimize-contrast;
+}
+
+/* Image d'entête
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page__content {
+	width: 1080px;
+	padding-top: 4520px;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.7);
+	margin-bottom: 400px;
+}
+
+#entête {
+  position: absolute;
+width: 982px;
+height: 310px;
+left: calc(50% - 982px/2 - 7px);
+top: 36px;
+image-rendering: -webkit-optimize-contrast;
+}
+
+/* Home menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.home__menu {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#e141_11 {
+	position: absolute;
+	top: 49px;
+	left: calc(50% - 854px/2 - 29px);
+	width: 854px;
+	height: 120px;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	position: relative font-family:Abhaya Libre;
+	float: left;
+	color: black;
+	text-align: center;
+	letter-spacing: 0;
+	font-size: 24px;
+	line-height: 35px;
+}
+
+nav > ul li:hover .sous {
+	display: block;
+	max-height: 13rem;
+	transition: all .6s ease-out;
+	transition-delay: 0; /* Pas de délai à l'ouverture du menu */
+	z-index: 1000;
+
+}
+
+nav ul::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+nav a {
+	display: inline-block;
+	padding: 10px 20px;
+	border-bottom: 2px solid transparent;
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	border-bottom: 2px solid gold;
+	color: orange;
+}
+
+.sous {
+	position: absolute;
+	overflow: hidden;
+	max-height: 0;
+	padding: 0;
+	border-radius: 0 0 8px 8px;
+	background-color: white;
+	box-shadow: 0 1px 2px #ccc;
+	transition: all .6s ease-out;
+	transition-delay: 0s; /* Délai avant refermeture du menu */
+}
+
+.sous li {
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+
+.sous a {
+	padding: 10px;
+	border-bottom: none;
+	color: black;
+	white-space: nowrap;
+	margin: 0 15px;
+}
+
+.sous a:hover {
+	border-bottom: none;
+	background-color: #8ecaec;
+}
+
+.deroulant>a::after {
+	color: #64bced;
+	content: " ▼";
+	font-size: 12px;
+}
+
+.rectangle {
+	border: 1px solid #fff;
+	background: rgba(0, 0, 0, .7);
+	margin: 0 25px 25px 25px;
+}
+
+.rectangle:hover {
+	background: #5cd549;
+}
+
+.rectangle--active {
+	background: rgba(8, 33, 123, .7);
+}
+
+#intro {
+  position: absolute;
+width: 1039px;
+height: 351px;
+left: calc(50% - 950px/2 - 5px);
+top: 330px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#titreextraits {
+  position: absolute;
+width: 485px;
+height: 28px;
+left: calc(50% - 485px/2 - 245px);
+top: 600px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: center;
+color: #FFFFFF;
+}
+
+#bandeson {
+  position: absolute;
+  width: 1080px;
+  height: 1950px;
+  top: 690px;
+  left: calc(50% - 1010px/2 - 6px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#analyse {
+  position: absolute;
+width: 1030px;
+height: 1066px;
+left: calc(50% - 950px/2 - 5px);
+top: 2660px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#titreenregistrement {
+  position: absolute;
+width: 1080px;
+height: 28px;
+left: calc(50% - 485px/2 - 237px);
+top: 4010px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+text-align: left;
+color: #FFFFFF;
+}
+#sessionenregistrement {
+  position: absolute;
+  top: 4130px;
+  left: calc(50% - 950px/2 - 5px);
+}
