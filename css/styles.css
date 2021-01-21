@@ -11,17 +11,17 @@ body {
 
 /* Background
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page__background {					/* Donne un style à .page__background */
 
+.page__background {      /* Donne un style à .page__background */
 	position: fixed;
-	width: 100vw;
-	height: 100vh;
 	top: 0;
 	left: 0;
 	z-index: -1;					/* Permet de faire passer l'élément en arrière plan */
+	width: 100vw;
+	height: 100vh;
 }
 
-.page__background img {				/* Permet de cibler plus précisément l'image qui se trouve dans .page__background */
+.page__background img { /* Permet de cibler plus précisément l'image qui se trouve dans .page__background */
 	width: 100%;					/* La largeur de l'image remplit 100% de son parent */
 	height: 100%;					/* La hauteur de l'image remplit 100% de son parent */
 }
@@ -30,13 +30,10 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page__content {
 	width: 1080px;
+	padding-top: 3200px;
 	margin: 0 auto;
-	background-color: rgba(0, 0, 0, 0.5);
-}
-
-.page__content img {
-	width: 1080px;
-	height: 808px;
+	background-color: rgba(0, 0, 0, 0.7);
+	margin-bottom: 400px;
 }
 
 /* Home menu
@@ -49,10 +46,10 @@ body {
 
 #e141_11 {
 	position: absolute;
+	top: 49px;
+	left: calc(50% - 854px/2 - 29px);
 	width: 854px;
 	height: 120px;
-	left: calc(50% - 854px/2 - 29px);
-	top: 49px;
 }
 
 nav ul {
@@ -60,52 +57,53 @@ nav ul {
 }
 
 nav ul li {
-	float: left;
-	width: 25%;
-	line-height: 35px;
-	text-align: center;
 	position: relative font-family:Abhaya Libre;
-	font-size: 24px;
-	letter-spacing: 0;
-}
-
-nav ul::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-nav a {
-	display: block;
-	text-decoration: none;
+	float: left;
 	color: black;
-	border-bottom: 2px solid transparent;
-	padding: 10px 0px;
+	text-align: center;
+	letter-spacing: 0;
+	font-size: 24px;
+	line-height: 35px;
 }
 
-nav a:hover {
-	color: orange;
-	border-bottom: 2px solid gold;
-}
-
-.sous {
-	max-height:0;
-	box-shadow: 0px 1px 2px #CCC;
-	background-color: white;
-	position: absolute;
-	padding: 0;
-	overflow: hidden;
-	transition: all .6s ease-out;
-	transition-delay: 0s; /* Délai avant refermeture du menu */
-	border-radius: 0 0 8px 8px;
-}
-
-nav>ul li:hover .sous {
+nav > ul li:hover .sous {
 	display: block;
-	max-height: 13em;
+	max-height: 13rem;
 	transition: all .6s ease-out;
 	transition-delay: 0; /* Pas de délai à l'ouverture du menu */
 	z-index: 1000;
+
+}
+
+nav ul::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+nav a {
+	display: inline-block;
+	padding: 10px 20px;
+	border-bottom: 2px solid transparent;
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	border-bottom: 2px solid gold;
+	color: orange;
+}
+
+.sous {
+	position: absolute;
+	overflow: hidden;
+	max-height: 0;
+	padding: 0;
+	border-radius: 0 0 8px 8px;
+	background-color: white;
+	box-shadow: 0 1px 2px #ccc;
+	transition: all .6s ease-out;
+	transition-delay: 0s; /* Délai avant refermeture du menu */
 }
 
 .sous li {
@@ -124,469 +122,113 @@ nav>ul li:hover .sous {
 
 .sous a:hover {
 	border-bottom: none;
-	background-color: #8ECAEC;
+	background-color: #8ecaec;
 }
 
 .deroulant>a::after {
+	color: #64bced;
 	content: " ▼";
 	font-size: 12px;
-	color: #64BCED;
 }
 
-#Rectangle {
-	position: absolute;
-	background-color: rgba(231, 227, 227, 0.7);
-	opacity: 1;
-	width: 976px;
-	height: 191px;
-	left: calc(50% - 976px/2 + 4px);
-	top: 16px;
+.rectangle {
+	border: 1px solid #fff;
+	background: rgba(0, 0, 0, .7);
+	margin: 0 25px 25px 25px;
 }
 
-#Parchemin {
-	position: absolute;
-	width: 795px;
-	height: 498px;
-	right: 142px;
-	left: calc(50% - 795px/2 + 0.5px);
-	top: 244px;
+.rectangle:hover {
+	background: #5cd549;
 }
 
-#Introduction {
-	position: absolute;
-	width: 676px;
-	height: 248px;
-	left: calc(50% - 676px/2 - 6px);
-	top: 389px;
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
+.rectangle--active {
+	background: rgba(8, 33, 123, .7);
 }
 
-#lignemenu {
-	position: absolute;
-	width: 50px;
-	height: 0px;
-	left: calc(50% - 53.01px/2 - 310.5px);
-	top: 115px;
-	border: 1px solid #000000
+#rectanglemauve {
+  position: absolute;
+width: 808px;
+height: 52px;
+left: calc(50% - 808px/2);
+top: 260px;
+background: #A097A3;
+}
+h1 {
+  position: absolute;
+width: 318px;
+height: 26px;
+left: calc(50% - 318px/2 + 27px);
+top: 255px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+color: #430F98;
 }
 
-#Fond {
-	position: absolute;
-	width: 1080px;
-	height: 3590px;
-	left: calc(50% - 1080px/2);
-	top: 808px;
-	background: #3F3D3D;
+span {
+  position: absolute;
+width: 1039px;
+height: 32px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 356px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+text-decoration-line: underline;
+color: #FFFFFF;
 }
 
-#Noir {
-	position: absolute;
-	background: #000000;
-	width: 622px;
-	height: 466px;
-	top: 854px;
-	left: calc(50% - 622px/2 - 5px);
+#illustration {
+  position: absolute;
+width: 291px;
+height: 431px;
+left: calc(50% - 291px/2 - 345px);
+top: 420px;
+image-rendering: -webkit-optimize-contrast;
+}
+#introduction {
+  position: absolute;
+width: 719px;
+height: 489px;
+left: calc(50% - 719px/2 + 180px);
+top: 395px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
 }
 
-#Blanc1 {
-	width: 255px;
-	height: 356px;
-	background: #FFFFFF;
-	position: absolute;
-	top: 933px;
-	left: calc(50% - 255px/2 - 167.5px);
+#dvp {
+  position: absolute;
+width: 1041px;
+height: 1436px;
+left: calc(50% - 985px/2 + 1.5px);
+top: 950px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
 }
 
-#Blanc2 {
-	background: #FFFFFF;
-	position: absolute;
-	width: 255px;
-	height: 356px;
-	left: calc(50% - 255px/2 + 159.5px);
-	top: 933px
-}
+#fin {
+  position: absolute;
+width: 1034px;
+height: 160px;
+left: calc(50% - 975px/2 - 4px);
+top: 3020px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
 
-#série {
-	position: absolute;
-	width: 117px;
-	height: 156px;
-	left: calc(50% - 117px/2 - 167.5px);
-	top: 949px;
-	image-rendering: -webkit-optimize-contrast;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-#série:hover {
-	-webkit-transform: scale(1.6);
-	transform: scale(1.6);
-}
-
-#livres {
-	position: absolute;
-	width: 128px;
-	height: 114px;
-	left: calc(50% - 128px/2 + 168px);
-	top: 960px;
-	image-rendering: -webkit-optimize-contrast;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-#livres:hover {
-	-webkit-transform: scale(1.6);
-	transform: scale(1.6);
-}
-
-#universétendue {
-	position: absolute;
-	color: #FF0000;
-	width: 538px;
-	height: 42px;
-	letter-spacing: 0;
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 42px;
-	text-align: center;
-	left: calc(50% - 538px/2 - 16px);
-	top: 866px
-}
-
-#titresérie {
-	position: absolute;
-	width: 183px;
-	height: 92px;
-	left: calc(50% - 183px/2 - 167.5px);
-	top: 1147px;
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 48px;
-	line-height: 56px;
-	text-align: center;
-	color: #000000;
-}
-
-#titrelivres {
-	position: absolute;
-	width: 183px;
-	height: 92px;
-	left: calc(50% - 183px/2 + 166.5px);
-	top: 1127px;
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: normal;
-	font-size: 48px;
-	line-height: 56px;
-	text-align: center;
-	color: #000000;
-}
-
-#Carrénoir {
-	position: absolute;
-	background: #0B0A0A;
-	width: 1005px;
-	height: 2870px;
-	top: 1511px;
-	left: calc(50% - 1005px/2 - 4.5px);
-}
-
-#Carrécyan {
-	position: absolute;
-	width: 1005px;
-	height: 70px;
-	left: calc(50% - 1005px/2 - 4.5px);
-	top: 1387px;
-	background: #84ACB9;
-}
-
-#Jeux {
-	position: absolute;
-	width: 181px;
-	height: 41px;
-	left: calc(50% - 181px/2 - 4.5px);
-	top: 1377px;
-	font-family: HeadlandOne;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 45px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#Préambule {
-	position: absolute;
-	width: 976px;
-	height: 592px;
-	top: 1510px;
-	left: calc(50% - 976px/2 - 5px);
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: 900;
-	font-size: 24px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#EnPologne {
-	position: absolute;
-	width: 976px;
-	height: 592px;
-	left: calc(50% - 976px/2 - 5px);
-	top: 1580px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#tw1cover {
-	position: absolute;
-	width: 161px;
-	height: 232px;
-	left: calc(50% - 161px/2 - 305.5px);
-	top: 2150px;
-	image-rendering: -webkit-optimize-contrast;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-#tw1cover:hover {
-	-webkit-transform: scale(1.6);
-	transform: scale(1.6);
-}
-#tw2cover {
-	position: absolute;
-	width: 168px;
-	height: 239px;
-	left: calc(50% - 168px/2 + 12px);
-	top: 2150px;
-	image-rendering: -webkit-optimize-contrast;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-#tw2cover:hover {
-	-webkit-transform: scale(1.6);
-	transform: scale(1.6);
-}
-#tw3cover {
-	position: absolute;
-	width: 165px;
-	height: 240px;
-	left: calc(50% - 165px/2 + 281.5px);
-	top: 2150px;
-	image-rendering: -webkit-optimize-contrast;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-#tw3cover:hover {
-	-webkit-transform: scale(1.6);
-	transform: scale(1.6);
-}
-
-#TW1 {
-	position: absolute;
-	width: 160px;
-	height: 262px;
-	left: calc(50% - 160px/2 - 309px);
-	top: 2415px;
-	font-family: Risque;
-	font-style: normal;
-	font-weight: 400px;
-	font-size: 36px;
-	line-height: 42px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#TW2 {
-	position: absolute;
-	width: 160px;
-	height: 262px;
-	left: calc(50% - 160px/2 + 3px);
-	top: 2415px;
-	font-family: Risque;
-	font-style: normal;
-	font-weight: 400px;
-	font-size: 36px;
-	line-height: 42px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#TW3 {
-	position: absolute;
-	width: 160px;
-	height: 262px;
-	left: calc(50% - 160px/2 + 300px);
-	top: 2418px;
-	font-family: Risque;
-	font-style: normal;
-	font-weight: 400px;
-	font-size: 36px;
-	line-height: 42px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#Lasuite {
-	position: absolute;
-	width: 976px;
-	height: 706px;
-	left: calc(50% - 976px/2 - 5px);
-	top: 2530px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#Gwent {
-	width: 341px;
-	height: 179px;
-	left: calc(50% - 341px/2 - 252.5px);
-	top: 3275px;
-	image-rendering: -webkit-optimize-contrast;
-}
-
-#Thronebreaker {
-	width: 359px;
-	height: 179px;
-	left: calc(50% - 359px/2 + 207.5px);
-	top: 3275px;
-	image-rendering: -webkit-optimize-contrast;
-}
-
-#Oncontinue {
-	position: absolute;
-	width: 976px;
-	height: 204px;
-	left: calc(50% - 976px/2 - 5px);
-	top: 3474px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#lesjeux {
-	position: absolute;
-	width: 976px;
-	height: 204px;
-	left: calc(50% - 976px/2 - 5px);
-	top: 3520px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#jeudeplateau {
-	width: 109px;
-	height: 147px;
-	left: calc(50% - 109px/2 - 252.5px);
-	top: 3716px;
-	image-rendering: -webkit-optimize-contrast;
-}
-
-#adventure {
-	width: 133px;
-	height: 133px;
-	left: calc(50% - 133px/2 + 0.5px);
-	top: 3723px;
-	image-rendering: -webkit-optimize-contrast;
-}
-
-#easymode {
-	width: 100px;
-	height: 129px;
-	left: calc(50% - 100px/2 + 266px);
-	top: 3725px;
-	image-rendering: -webkit-optimize-contrast;
-}
-
-#Chiffres {
-	position: absolute;
-	width: 976px;
-	height: 486px;
-	left: calc(50% - 976px/2 - 5px);
-	top: 3863px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#stats {
-	position: absolute;
-	width: 976px;
-	height: 486px;
-	left: calc(50% - 976px/2 - 5px);
-	top: 4110px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-#Ecoldedesorceleur {
-	position: absolute;
-	width: 976px;
-	height: 486px;
-	left: calc(50% - 976px/2 - 5px);
-	top: 4305px;
-	font-family: Abhaya Libre;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	color: #FFFFFF;
-}
-
-.jeux_img {
-	position: absolute;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-	z-index: 0;
-}
-.jeux_img:hover {
-	-webkit-transform: scale(1.6);
-	transform: scale(1.6);
-	z-index: 1;
 }
