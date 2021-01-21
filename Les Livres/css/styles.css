@@ -1,0 +1,499 @@
+/* Reset
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+* {
+	box-sizing: border-box;			/* Réinitialise le modèle de boite pour tout le document */
+}
+
+body {
+	margin: 0;						/* Supprime les marges par défaut du navigateur sur le body */
+	padding: 0;						/* Supprime les marges par défaut du navigateur sur le body */
+}
+
+/* Background
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.page__background {      /* Donne un style à .page__background */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;					/* Permet de faire passer l'élément en arrière plan */
+	width: 100vw;
+	height: 100vh;
+}
+
+.page__background img { /* Permet de cibler plus précisément l'image qui se trouve dans .page__background */
+	width: 100%;					/* La largeur de l'image remplit 100% de son parent */
+	height: 100%;					/* La hauteur de l'image remplit 100% de son parent */
+	image-rendering: -webkit-optimize-contrast;
+}
+
+.page__content {
+	width: 1080px;
+	margin: 0 auto;
+	padding-top: 4210px;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Home menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.home__menu {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#e141_11 {
+	position: absolute;
+	top: 49px;
+	left: calc(50% - 854px/2 - 29px);
+	width: 854px;
+	height: 120px;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	position: relative font-family:Abhaya Libre;
+	float: left;
+	color: black;
+	text-align: center;
+	letter-spacing: 0;
+	font-size: 24px;
+	line-height: 35px;
+}
+
+nav > ul li:hover .sous {
+	display: block;
+	max-height: 13rem;
+	transition: all .6s ease-out;
+	transition-delay: 0; /* Pas de délai à l'ouverture du menu */
+	z-index: 1000;
+
+}
+
+nav ul::after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+nav a {
+	display: inline-block;
+	padding: 10px 20px;
+	border-bottom: 2px solid transparent;
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	border-bottom: 2px solid gold;
+	color: orange;
+}
+
+.sous {
+	position: absolute;
+	overflow: hidden;
+	max-height: 0;
+	padding: 0;
+	border-radius: 0 0 8px 8px;
+	background-color: white;
+	box-shadow: 0 1px 2px #ccc;
+	transition: all .6s ease-out;
+	transition-delay: 0s; /* Délai avant refermeture du menu */
+}
+
+.sous li {
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+
+.sous a {
+	padding: 10px;
+	border-bottom: none;
+	color: black;
+	white-space: nowrap;
+	margin: 0 15px;
+}
+
+.sous a:hover {
+	border-bottom: none;
+	background-color: #8ecaec;
+}
+
+.deroulant>a::after {
+	color: #64bced;
+	content: " ▼";
+	font-size: 12px;
+}
+
+.rectangle {
+	border: 1px solid #fff;
+	background: rgba(0, 0, 0, .7);
+	margin: 0 25px 25px 25px;
+}
+
+.rectangle:hover {
+	background: #5cd549;
+}
+
+.rectangle--active {
+	background: rgba(8, 33, 123, .7);
+}
+
+#rectanglecyan {
+	position: absolute;
+	top: 274px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 856px;
+	height: 66px;
+	background: #6c959b;
+}
+
+#Sapkowski {
+	position: absolute;
+	top: 247px;
+	left: calc(50% - 523px/2 - 8.5px);
+	width: 550px;
+	height: 36px;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 48px;
+	font-family: Abhaya Libre;
+	line-height: 57px;
+}
+
+#photosapkowski {
+	position: absolute;
+width: 374px;
+height: 281px;
+left: calc(50% - 374px/2 - 300px);
+top: 405px;
+}
+#biographie {
+	position: absolute;
+width: 634px;
+height: 330px;
+left: calc(50% - 634px/2 + 225px);
+top: 375px;
+font-family: Roboto;
+font-style: normal;
+font-weight: regular;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#sériehistorique {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 759px;
+font-family: Roboto;
+font-style: normal;
+font-weight: regular;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#pré-liste {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 780px;
+font-family: Roboto;
+font-style: normal;
+font-weight: regular;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+#éditions {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 1020px/2 + 0.5px);
+top: 880px;
+font-family: Roboto;
+font-style: normal;
+font-weight: regular;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#suite {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 1050px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#recueil {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 1250px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+#nontraduit {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 1270px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#roman {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 1620px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+#nouvellesortie {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 1640px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+#saisondesorages {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 1020px/2 + 0.5px);
+top: 1720px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+#textesaisondesorages {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 1760px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#partie4 {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 2200px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+#Bragelonne {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 2220px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#image1 {
+width: 158px;
+height: 249px;
+left: calc(50% - 158px/2 - 377px);
+top: 2364px;
+}
+#image2 {
+width: 161px;
+height: 249px;
+left: calc(50% - 161px/2 - 127.5px);
+top: 2364px;
+}
+#image3 {
+width: 151px;
+height: 249px;
+left: calc(50% - 151px/2 + 119.5px);
+top: 2364px;
+}
+#image4 {
+width: 154px;
+height: 249px;
+left: calc(50% - 154px/2 + 364px);
+top: 2364px;
+}
+
+#En2016 {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 2658px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#image5 {
+width: 135px;
+height: 212px;
+left: calc(50% - 135px/2 - 275.5px);
+top: 2889px;
+}
+#image6 {
+width: 159px;
+height: 212px;
+left: calc(50% - 159px/2 - 21.5px);
+top: 2889px;
+}
+#image7 {
+width: 162px;
+height: 212px;
+left: calc(50% - 162px/2 + 251px);
+top: 2889px;
+}
+
+#En2017 {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 3140px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#image8 {
+width: 121px;
+height: 187px;
+left: calc(50% - 121px/2 - 264.5px);
+top: 3302px;
+}
+#image9 {
+width: 125px;
+height: 187px;
+left: calc(50% - 125px/2 - 4.5px);
+top: 3302px;
+}
+#image10 {
+width: 122px;
+height: 187px;
+left: calc(50% - 122px/2 + 256px);
+top: 3302px;
+}
+
+#bd {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 3522px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+#image11 {
+width: 147px;
+height: 223px;
+left: calc(50% - 147px/2 - 158.5px);
+top: 3622px;
+}
+#image12 {
+width: 141px;
+height: 221px;
+left: calc(50% - 141px/2 + 119.5px);
+top: 3622px;
+}
+
+#nouvellescollections {
+	position: absolute;
+width: 1033px;
+height: 641px;
+left: calc(50% - 980px/2 + 0.5px);
+top: 3884px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+}
+
+.livres_img {
+	position: absolute;
+	image-rendering: -webkit-optimize-contrast;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	z-index: 0;
+}
+.livres_img:hover {
+	-webkit-transform: scale(1.6);
+	transform: scale(1.6);
+	z-index: 1;
+}
