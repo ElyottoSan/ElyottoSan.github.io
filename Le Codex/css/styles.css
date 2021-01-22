@@ -321,6 +321,7 @@ height: 338px;
 left: calc(50% - 234px/2 - 202px);
 top: 990px;
 image-rendering: -webkit-optimize-contrast;
+z-index: 0;
 -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
@@ -329,6 +330,7 @@ image-rendering: -webkit-optimize-contrast;
 #cartesorceleur:hover {
 	-webkit-transform: scale(1.9);
 	transform: scale(1.9);
+z-index: 1;
 }
 #carteblasons {
   position: absolute;
@@ -337,6 +339,7 @@ height: 338px;
 left: calc(50% - 240px/2 + 169px);
 top: 990px;
 image-rendering: -webkit-optimize-contrast;
+z-index: 0;
 -webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
@@ -345,6 +348,7 @@ image-rendering: -webkit-optimize-contrast;
 #carteblasons:hover {
 	-webkit-transform: scale(1.9);
 	transform: scale(1.9);
+z-index: 1;
 }
 
 #Mondeconnu {
